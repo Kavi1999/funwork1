@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+      FUN WORK
+  </title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   <script src="//connect.soundcloud.com/sdk.js"></script>
+   <script src="main.js"></script>
+
+
+   <style>
+    .filterDiv {
+     display: none;
+    }
+
+    .show {
+     display: block;
+    }
+    .nav{
+      background-color:white;
+    }
+    .showt{
+      background-color:black;
+      height: 52px;
+      color:white;
+    }
+    .ABCselect {
+      cursor: pointer;
+      text-align: center;
+      font-size: 22px;
+      color: red;
+      margin-top: 35px;
+      margin-left: -60px;
+    }
+    li:hover{
+      background-color: #E0DCDB;
+      
+    } 
+
+    .ABCselect li{
+      display: inline-block;
+    }
+    .ABCselect a{
+      color:black;
+    }
+
+    .label-default, .films li {
+    background-color: #e4e7ec;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+    }
+
+    .films a {
+      color:#90939a;
+    }
+
+    .films {
+      cursor: pointer;
+      margin-top: -35px;
+      margin-left: 320px;
+      padding: 33px;
+    }
+    .films li{
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 2.5px 9px 1.5px;
+    border: 0;
+    border-radius: 3px;
+    font-size: 12px;
+    transition: 0.1s all;
+      }
+      
+
+    .jumbotron {
+        margin-top: -20px;
+        border-bottom: 1px solid #dae2e4;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+        
+      }
+
+    .bc-gray {
+      background-color: #f4f6f8;
+    }
+
+    .optionsbar {
+      padding: px;
+      margin-top: -35px;
+      width: 100%;
+      height: 200px;
+    }
+    .bg-color{
+      background-image: url("http://lepassetempsderose.l.e.pic.centerblog.net/7067cf55.gif");
+      height: 1460px;
+      margin-top: -20px;
+    }
+    .search {
+    color: #4f4f4f;
+    font-weight: 300;
+    font-size: 1.5em;
+    padding: 7px;
+    margin-top: -10px;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    }
+    .pull-right {
+    float: right !important;
+    }
+
+    .panel {
+      margin-top: 30px;
+      width: 1120px;
+      margin-left: -20px;
+    }
+
+    .panel-default {
+    border-color:#cfd9d7;
+    }
+    .row {
+    margin-left: -15px;
+    margin-right: -15px;
+    }
+    .bor{
+      border-style:dotted;
+      border-width: 1px;
+        }
+      .img-rounded{
+        width:261px;
+        height:380px;
+      }
+
+  
+      </style>
+  </head>
+  <body>
+
+  <nav class="navbar navbar-default nav">
+       <div class="container-fluid">
+       <div class="navbar-header">
+                  <a class="navbar-brand showt" href="#">MUSICPLAYER</b></a>
+       </div>
+            <ul class="nav navbar-nav">
+                  <li class="bor"><a href="#">Home</a></li>
+                  <li><a href="#">Add</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            </ul>
+      </div>
+    </nav>
+
+  <div class="jumbotron optionsbar bc-gray">
+  <div class="container">
+
+
+<ul class="ABCselect">
+  <li   onclick="filterSelection('all')" >
+    <a href="#">0-9</a>
+  </li>
+  <li   onclick="filterSelection('A')" >
+    <a href="#">A</a>
+  </li>
+  <li   onclick="filterSelection('B')" >
+    <a href="#">B</a>
+  </li>
+  <li   onclick="filterSelection('C')" >
+    <a href="#">C</a>
+  </li>
+  <li   onclick="filterSelection('DD')" >
+    <a href="#">D</a>
+  </li>
+  <li   onclick="filterSelection('E')" >
+    <a href="#">E</a>
+  </li>
+  <li   onclick="filterSelection('F')" >
+    <a href="#">F</a>
+  </li>
+  <li   onclick="filterSelection('G')" >
+    <a href="#">G</a>
+  </li>
+  <li   onclick="filterSelection('H')" >
+    <a href="#">H</a>
+  </li>
+  <li   onclick="filterSelection('I')" >
+    <a href="#">I</a>
+  </li>
+  <li   onclick="filterSelection('J')" >
+    <a href="#">J</a>
+  </li>
+  <li   onclick="filterSelection('K')" > 
+   <a href="#">K</a>
+  </li>
+  <li   onclick="filterSelection('L')" >
+    <a href="#">L</a>
+  </li>
+  <li   onclick="filterSelection('M')" >
+    <a href="#">M</a>
+  </li>
+  <li   onclick="filterSelection('N')" >
+    <a href="#">N</a>
+  </li>
+  <li   onclick="filterSelection('O')" >
+    <a href="#">O</a>
+  </li>
+  <li   onclick="filterSelection('P')" >
+    <a href="#">P</a>
+  </li>
+  <li   onclick="filterSelection('Q')" >
+    <a href="#">Q</a>
+  </li>
+  <li   onclick="filterSelection('R')" >
+    <a href="#">R</a>
+  </li>
+  <li   onclick="filterSelection('S')" >
+    <a href="#">S</a> 
+  </li>
+  <li   onclick="filterSelection('T')" >
+    <a href="#">T</a>
+  </li>
+  <li   onclick="filterSelection('U')" >
+    <a href="#">U</a>
+  </li>
+  <li   onclick="filterSelection('V')" >
+    <a href="#">V</a>
+  </li>
+  <li   onclick="filterSelection('W')" >
+    <a href="#">W</a>
+  </li>
+  <li   onclick="filterSelection('X')" >
+    <a href="#">X</a>
+  </li>
+  <li   onclick="filterSelection('Y')" >
+    <a href="#">Y</a>
+  </li>
+    <li   onclick="filterSelection('Z')" >
+    <a href="#">Z</a>
+  </li>
+</ul>
+</div>
+
+
+  <div class="films container">
+  <ul>
+  <li onclick="filterSelection('action')"> 
+    <a href=""><b>Action</b></a>
+  </li>
+  <li onclick="filterSelection('adventure')"> 
+    <a href=""><b>Adventure</b></a>
+  </li>
+  <li onclick="filterSelection('animation')"> 
+    <a href=""><b>Animation</b></a>
+  </li>
+  <li onclick="filterSelection('Z')"> 
+    <a href=""><b>Children</b></a>
+  </li>
+  <li onclick="filterSelection('comedy')"> 
+    <a href=""><b>Comedy</b></a>
+  </li>
+  <li onclick="filterSelection('Z')"> 
+    <a href=""><b>Crime</b></a>
+  </li>
+  <li onclick="filterSelection('Z')"> 
+    <a href=""><b>Documentary</b></a>
+  </li>
+  <li onclick="filterSelection('drama')"> 
+    <a href=""><b>Drama</b></a>
+  </li>
+  <li onclick="filterSelection('Z')"> 
+    <a href=""><b>Family</b></a>
+  </li>
+  <li onclick="filterSelection('Z')"> 
+    <a href=""><b>Fantasy</b></a>
+  </li>
+  <li onclick="filterSelection('Z')"> 
+    <a href=""><b>Food</b></a>
+  </li>
+  <li onclick="filterSelection('Z')"> 
+    <a href=""><b>Home and Garden</b></a>
+  </li>
+  <li onclick="filterSelection('horror')"> 
+    <a href=""><b>Horror</b></a>
+  </li>
+  <li onclick="filterSelection('Z')"> 
+    <a href=""><b>Mini-series</b></a><br>
+  </li>
+  <li onclick="filterSelection('Z')"> 
+    <a href=""><b>Mystery</b></a>
+  </li>
+  <li onclick="filterSelection('Z')"> 
+    <a href=""><b>News</b></a>
+  </li>
+  <li onclick="filterSelection('Z')"> 
+    <a href=""><b>Reality</b></a>
+  </li>
+  <li onclick="filterSelection('Z')"> 
+    <a href=""><b>Romance</b></a>
+  </li>
+  <li onclick="filterSelection('Z')"> 
+    <a href=""><b>Sci-Fi</b></a>
+  </li>
+  <li onclick="filterSelection('Z')"> 
+    <a href=""><b>Sport</b></a>
+  </li>
+  <li onclick="filterSelection('Z')"> 
+    <a href=""><b>Suspense</b></a>
+  </li>
+  <li onclick="filterSelection('Z')"> 
+    <a href=""><b>Talk Show</b></a>
+  </li>
+  <li onclick="filterSelection('Z')">
+    <a href=""><b>Thriller</b></a>
+  </li>
+  <li onclick="filterSelection('Z')"> 
+    <a href=""><b>Travel</b></a>
+  </li>
+  </ul>
+  </div>
+  </div>
+
+
+
+
+<div class="bg-color">
+<div class="container">
+ 
+  <div class="panel panel-default">
+    <div class="panel-heading"><b>SONG COLLECTIONS</b>
+       <div class="pull-right">
+          <input class="search" type="text" placeholder="Search...">
+       </div>
+    </div>
+  <div class="panel-body">
+  <div class="row show-list">
+<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<SONG-1>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+ <div class="filterDiv Z horror">
+  <div class="col-xs-4 col-md-3">
+      <a href="details.html">
+         <img class="img-rounded" src="https://extraimage.com/images/2019/09/01/9d70df2270ba0ddaa67e2e738af57f18.jpg" width="100%">
+      </a>
+        <div class="text-center">
+            <a href="file:///home/ukikcpc07/Desktop/F.ASSIGNMENT/detailss.html" class="text-bold">Thandora kannala...</a>
+            <p class="text-muted">Duration: 5m 12s <br> Type: love</p>
+            <button id="st" class="button"></button>
+        </div>
+  </div>
+</div>
+
+<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<SONG-2>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+<div class="filterDiv L comedy">
+  <div class="col-xs-4 col-md-3">
+      <a href="#">
+         <img class="img-rounded" src="https://assets.voxcinemas.com/posters/P_HO00006629.jpg" width="100%">
+      </a>
+        <div class="text-center">
+            <a href="#" class="text-bold">Yeno penne...</a>
+            <p class="text-muted">Duration: 4m 24s <br> Type: love</p>
+        </div>
+  </div>
+</div>
+
+<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<SONG-3>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+<div class="filterDiv M action adventure">
+  <div class="col-xs-4 col-md-3">
+      <a href="#">
+         <img class="img-rounded" src="https://cdn.cinematerial.com/p/500x/rqi9ptfm/anjaan-indian-movie-poster.jpg?v=1515268946" width="100%">
+      </a>
+        <div class="text-center">
+            <a href="#" class="text-bold">Maleficent</a>
+            <p class="text-muted">Duration: 4m 34s <br> Type: Action</p>
+        </div>
+  </div>
+</div>
+
+<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<SONG-4>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+<div class="filterDiv A drama">
+  <div class="col-xs-4 col-md-3">
+      <a href="#">
+         <img class="img-rounded" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Poovellam_Kettuppar_DVD_Cover.jpg/220px-Poovellam_Kettuppar_DVD_Cover.jpg" width="100%">
+      </a>
+        <div class="text-center">
+            <a href="#" class="text-bold">AboMinable</a>
+            <p class="text-muted">Duration: 1h 37m <br> Type: Adventure</p>
+        </div>
+  </div>
+</div>
+ </div>
+
+
+  <div class="row">
+<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<SONG-5>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+<div class="filterDiv B adventure">
+  <div class="col-xs-4 col-md-3">
+      <a href="#">
+         <img class="img-rounded" src="http://t3.gstatic.com/images?q=tbn:ANd9GcS98JZEXHPI-a5Wnfz-NN6wYVj0IXe5woV0KLejxCAbdsDbiGaA" width="100%">
+      </a>
+        <div class="text-center">
+            <a href="#" class="text-bold">Bigil</a>
+            <p class="text-muted">Duration: 2h 59m <br> Type: Sport</p>
+        </div>
+  </div>
+</div>
+
+<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<SONG-6>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+<div class="filterDiv F action animation">
+  <div class="col-xs-4 col-md-3">
+      <a href="#">
+         <img class="img-rounded" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f0f790f1-e292-4aa9-a713-792a135017fa/dbdmr0v-923fdee9-57ae-44eb-b086-6defa637f5b0.jpg/v1/fill/w_1024,h_1442,q_75,strp/mersal_movie_painting_uhd__by_vigneshtdesign_dbdmr0v-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTQ0MiIsInBhdGgiOiJcL2ZcL2YwZjc5MGYxLWUyOTItNGFhOS1hNzEzLTc5MmExMzUwMTdmYVwvZGJkbXIwdi05MjNmZGVlOS01N2FlLTQ0ZWItYjA4Ni02ZGVmYTYzN2Y1YjAuanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.8DxraYCucRATf-RLINCw7_oeedVBC7W8-2GMFvcbddI" width="100%">
+      </a>
+        <div class="text-center">
+            <a href="#" class="text-bold">Fractured</a>
+            <p class="text-muted">Duration: 1h 40m <br> Type: Thriller</p>
+        </div>
+  </div>
+</div>
+
+<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<SONG-7>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+<div class="filterDiv K animation action">
+  <div class="col-xs-4 col-md-3">
+      <a href="#">
+         <img class="img-rounded" src="https://i2.cinestaan.com/image-bank/1500-1500/81001-82000/81597.jpg" width="100%">
+      </a>
+        <div class="text-center">
+            <a href="#" class="text-bold">KnivesOut</a>
+            <p class="text-muted">Duration: 2h 10m <br> Type: Thriller</p>
+        </div>
+  </div>
+</div>
+
+<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<SONG-8>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+<div class="filterDiv DD A animation">
+  <div class="col-xs-4 col-md-3">
+      <a href="#">
+         <img class="img-rounded" src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Devi_2_poster.jpg/220px-Devi_2_poster.jpg" width="100%">
+      </a>
+        <div class="text-center">
+            <a href="#" class="text-bold">DoctorSleep</a>
+            <p class="text-muted">Duration: 2h 31m <br> Type: Thriller</p>
+        </div>
+  </div>
+</div>
+</div>
+
+<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<SONG-9>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+<div class="row">
+<div class="filterDiv K action animation">
+  <div class="col-xs-4 col-md-3">
+      <a href="#">
+         <img class="img-rounded" src="https://pbs.twimg.com/media/D8yr6xqWkAENiQZ.jpg" width="100%">
+      </a>
+        <div class="text-center">
+            <a href="#" class="text-bold">KAPPAN</a>
+            <p class="text-muted">Duration: 2h 32m <br> Type: Action</p>
+        </div>
+  </div>
+</div>
+
+<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<SONG-10>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+<div class="filterDiv V animation ">
+  <div class="col-xs-4 col-md-3">
+      <a href="#">
+         <img class="img-rounded" src="https://nanaonline.in//wp-content/gallery/viswasam-tamil-movie-stills/Viswasam-Tamil-Movie-Stills-4.jpg" width="100%">
+      </a>
+        <div class="text-center">
+            <a href="#" class="text-bold">Visvasam</a>
+            <p class="text-muted">Duration: 2h 50m <br> Type: Sentiment</p>
+        </div>
+  </div>
+</div>
+
+<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<SONG-11>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+<div class="filterDiv N action">
+  <div class="col-xs-4 col-md-3">
+      <a href="#">
+         <img class="img-rounded" src="https://www.movienewsletters.net/photos/289459R1.jpg" width="100%">
+      </a>
+        <div class="text-center">
+            <a href="#" class="text-bold">Nerkonda parvai</a>
+            <p class="text-muted">Duration: 2h 38m <br> Type: Action</p>
+        </div>
+  </div>
+</div>
+
+<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<SONG-12>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+<div class="filterDiv T action animation">
+  <div class="col-xs-4 col-md-3">
+      <a href="#">
+         <img class="img-rounded" src="https://image.tmdb.org/t/p/w200/ssYIBfoEj3eX46ARQNaJZP8qpxL.jpg" width="100%">
+      </a>
+        <div class="text-center">
+            <a href="#" class="text-bold">Theeran</a>
+            <p class="text-muted">Duration: 2h 58m <br> Type: Action</p>
+        </div>
+  </div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
